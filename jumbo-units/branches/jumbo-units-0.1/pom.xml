@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>cml</groupId>
   <artifactId>jumbo-units</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1-b1</version>
   <description>Manages units and physical quantities</description>
   <url>http://www.xml-cml.org/</url>
   <scm/>
@@ -29,19 +29,6 @@
           <source>1.5</source>
           <target>1.5</target>
         </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.3</version>
-        <configuration>
-          <includes>
-            <include>**/*.java</include>
-          </includes>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>2.2</version>
       </plugin>
     </plugins>
   </build>
@@ -95,8 +82,7 @@
     <repository>
       <id>wwmm</id>
       <name>WWMM Maven 2</name>
-      <url>scp://wwmm.ch.cam.ac.uk:/var/www/maven2/</url>
+      <url>dav:http://wwmm.ch.cam.ac.uk/maven2/</url>
     </repository>
   </distributionManagement>
-
 </project>
