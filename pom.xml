@@ -3,12 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>cml</groupId>
   <artifactId>jumbo-units</artifactId>
-  <version>0.1-b1</version>
+  <version>0.2-SNAPSHOT</version>
   <description>Manages units and physical quantities</description>
   <url>http://www.xml-cml.org/</url>
   <scm/>
   <build>
-    <finalName>jumbo-units</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
