@@ -85,4 +85,21 @@
       <url>dav:http://wwmm.ch.cam.ac.uk/maven2/</url>
     </repository>
   </distributionManagement>
+	<profiles>
+	  <profile>
+	    <id>release</id>
+	    <build>
+	      <plugins>
+		<plugin>
+		  <artifactId>maven-assembly-plugin</artifactId>
+		  <configuration>
+		    <descriptorRefs>
+		      <descriptorRef>src</descriptorRef>
+		    </descriptorRefs>
+		  </configuration>
+		</plugin>
+	      </plugins>
+	    </build>
+	  </profile>
+	</profiles>
 </project>
