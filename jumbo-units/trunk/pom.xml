@@ -33,9 +33,9 @@
   </build>
   <repositories>
     <repository>
-      <id>wwmm-repo</id>
-      <name>WWMM Maven2</name>
-      <url>http://wwmm.ch.cam.ac.uk/maven2</url>
+      <id>ucc-repository</id>
+      <name>maven.ch.cam.ac.uk</name>
+      <url>http://maven.ch.cam.ac.uk/m2repo/</url>
     </repository>
   </repositories>
   <dependencies>
@@ -78,10 +78,9 @@
     </plugins>
   </reporting>
   <distributionManagement>
-    <repository>
-      <id>wwmm</id>
-      <name>WWMM Maven 2</name>
-      <url>dav:http://wwmm.ch.cam.ac.uk/maven2/</url>
+      <repository>
+      <id>ucc-snapshots</id>
+      <url>http://maven.ch.cam.ac.uk/content/repositories/snapshots/</url>
     </repository>
   </distributionManagement>
 </project>
