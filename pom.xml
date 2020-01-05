@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>cml</groupId>
   <artifactId>jumbo-units</artifactId>
   <version>0.2-SNAPSHOT</version>
   <description>Manages units and physical quantities</description>
   <url>http://www.xml-cml.org/</url>
+
+  <licenses/>
+
+  <developers>
+    <developer>
+      <id>petermr</id>
+      <name>Peter Murray-Rust</name>
+    </developer>
+    <developer>
+      <id>jimdowning</id>
+      <name>Jim Downing</name>
+    </developer>
+    <developer>
+      <id>anyday</id>
+      <name>Nick Day</name>
+    </developer>
+  </developers>
+
   <scm/>
+
   <build>
     <plugins>
       <plugin>
@@ -31,6 +51,7 @@
       </plugin>
     </plugins>
   </build>
+
   <repositories>
     <repository>
       <id>ucc-repository</id>
@@ -38,6 +59,7 @@
       <url>http://maven.ch.cam.ac.uk/m2repo/</url>
     </repository>
   </repositories>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -57,6 +79,7 @@
       <version>1.2.13</version>
     </dependency>
   </dependencies>
+
   <reporting>
     <plugins>
       <plugin>
@@ -77,27 +100,25 @@
       </plugin>
     </plugins>
   </reporting>
-  <distributionManagement>
-      <repository>
-      <id>ucc-snapshots</id>
-      <url>http://maven.ch.cam.ac.uk/content/repositories/snapshots/</url>
-    </repository>
-  </distributionManagement>
-	<profiles>
-	  <profile>
-	    <id>release</id>
-	    <build>
-	      <plugins>
-		<plugin>
-		  <artifactId>maven-assembly-plugin</artifactId>
-		  <configuration>
-		    <descriptorRefs>
-		      <descriptorRef>src</descriptorRef>
-		    </descriptorRefs>
-		  </configuration>
-		</plugin>
-	      </plugins>
-	    </build>
-	  </profile>
-	</profiles>
+
+  <distributionManagement/>
+
+  <profiles>
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <configuration>
+              <descriptorRefs>
+                <descriptorRef>src</descriptorRef>
+              </descriptorRefs>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
 </project>
