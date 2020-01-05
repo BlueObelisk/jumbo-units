@@ -7,8 +7,16 @@
   <version>0.2-SNAPSHOT</version>
   <description>Manages units and physical quantities</description>
   <url>http://www.xml-cml.org/</url>
+  <inceptionYear>2008</inceptionYear>         
 
-  <licenses/>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
 
   <developers>
     <developer>
@@ -48,6 +56,35 @@
           <source>1.5</source>
           <target>1.5</target>
         </configuration>
+      </plugin>
+      <!-- Licence Maven Plugin (add license info to source files) -->
+      <plugin>
+        <groupId>com.mycila</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>2.11</version>
+        <configuration>
+          <header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+          <properties>
+            <owner>Peter Murray-Rust</owner>
+            <email>pm286@cam.ac.uk</email>
+          </properties>
+          <excludes>
+            <exclude>pom.xml</exclude>
+            <exclude>**/README.md</exclude>
+            <exclude>LICENSE.txt</exclude>
+            <exclude>.gitignore</exclude>
+            <exclude>src/test/resources/**</exclude>
+            <exclude>src/main/resources/**</exclude>
+            <exclude>junk/**</exclude>
+          </excludes>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
